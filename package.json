@@ -111,14 +111,14 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@iss-ai/plugin-ai": "^0.0.2",
-    "@iss-ai/plugin-cooperation": "^0.0.1",
-    "@iss-ai/plugin-menu": "^0.0.1",
-    "@iss-ai/plugin-my-library": "^0.0.1",
-    "@iss-ai/plugin-storage": "^0.0.1",
-    "@iss-ai/plugin-style-props": "^0.0.1",
-    "@iss-ai/ppt-board": "^0.0.6",
-    "@iss-ai/vue-canvas-core": "^0.0.11",
+    "@iss-ai/plugin-ai": "^0.0.3",
+    "@iss-ai/plugin-cooperation": "^0.0.2",
+    "@iss-ai/plugin-menu": "^0.0.2",
+    "@iss-ai/plugin-my-library": "^0.0.2",
+    "@iss-ai/plugin-storage": "^0.0.2",
+    "@iss-ai/plugin-style-props": "^0.0.2",
+    "@iss-ai/ppt-board": "^0.0.7",
+    "@iss-ai/vue-canvas-core": "^0.0.12",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "naive-ui": "^2.44.1"
