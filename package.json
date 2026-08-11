@@ -1,5 +1,5 @@
 {
-  "name": "@iss-ai/ppt-board",
+  "name": "@iss-ai/ppt-board-web",
   "description": "A fully-featured presentation and editing host application built on vue-canvas-core, integrating NaiveUI, a plugin system, and a unified local Dexie database.",
   "version": "0.0.2",
   "author": "iss-tools",
@@ -13,13 +13,13 @@
     "dexie",
     "database"
   ],
-  "homepage": "https://github.com/iss-tools/ppt-board#readme",
+  "homepage": "https://github.com/iss-tools/ppt-board-web#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iss-tools/ppt-board.git"
+    "url": "git+https://github.com/iss-tools/ppt-board-web.git"
   },
   "bugs": {
-    "url": "https://github.com/iss-tools/ppt-board/issues"
+    "url": "https://github.com/iss-tools/ppt-board-web/issues"
   },
   "private": false,
   "publishConfig": {
