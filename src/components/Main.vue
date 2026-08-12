@@ -48,7 +48,7 @@ const themeOverrides: GlobalThemeOverrides = {
   },
 };
 
-const editorRef = ref<InstanceType<typeof CanvasEditor> | null>(null);
+const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);
 
 onMounted(() => {
   if (props.plugins && editorRef.value) {
@@ -85,8 +85,8 @@ defineExpose(
         };
       },
     }
-  ) as unknown as InstanceType<typeof CanvasEditor> & {
-    getCoreEditor: () => InstanceType<typeof CanvasEditor> | null;
+  ) as unknown as InstanceType<typeof VueCanvasEditor> & {
+    getCoreEditor: () => InstanceType<typeof VueCanvasEditor> | null;
   }
 );
 </script>

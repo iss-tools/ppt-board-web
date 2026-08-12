@@ -2,6 +2,8 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
+**在线体验 / Online Demo**: [https://pptboard.com](https://pptboard.com)
+
 基于 `vue-canvas-core` 构建的强大数据驱动 Canvas 演示和编辑宿主程序。
 内置集成了 **NaiveUI** 组件库上下文，作为统一的编辑器主程序和插件生态的开发基座。
 
@@ -56,6 +58,24 @@ pnpm install
 - `docs: 更新文档说明` (文档修改)
 
 如果不遵循此格式，Git Hook 会拦截并拒绝你的提交。
+
+## 插件开发快速入门
+
+我们官方提供了一个脚手架工具，帮助你一键快速创建一个完美适配 `ppt-board` 的插件工程模板。
+
+1. 运行脚手架命令快速创建一个新的插件项目：
+   ```bash
+   npx create-vue-canvas-plugin@latest my-plugin
+   ```
+2. 进入新创建的插件目录并安装依赖：
+   ```bash
+   cd my-plugin
+   pnpm install
+   ```
+3. 你的插件已自动预配置好核心依赖 `@iss-ai/ppt-board`。你可以通过以下命令直接启动并测试你的插件：
+   ```bash
+   pnpm dev
+   ```
 
 ## 使用指南
 

@@ -2,6 +2,8 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
+**Online Demo / 在线体验**: [https://pptboard.com](https://pptboard.com)
+
 A fully-featured presentation and editing host application built on top of `vue-canvas-core`.
 It integrates the **NaiveUI** component library and provides a comprehensive plugin system wrapper, acting as the primary entry point for all future presentation editor development.
 
@@ -56,6 +58,24 @@ When you commit your changes, you must format your commit messages with specific
 - `docs: update readme` (Documentation changes)
 
 If you don't follow this format, your commit will be rejected by the Git `commit-msg` hook.
+
+## Plugin Development
+
+We provide an official scaffolding tool to quickly generate a boilerplate plugin that integrates seamlessly with `ppt-board`.
+
+1. Run the scaffolding command to generate a new plugin:
+   ```bash
+   npx create-vue-canvas-plugin@latest my-plugin
+   ```
+2. Navigate to your new plugin directory and install dependencies:
+   ```bash
+   cd my-plugin
+   pnpm install
+   ```
+3. Your plugin is pre-configured to use `@iss-ai/ppt-board`. You can start developing and testing your plugin by running:
+   ```bash
+   pnpm dev
+   ```
 
 ## Usage
 

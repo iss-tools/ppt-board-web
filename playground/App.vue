@@ -15,6 +15,8 @@ import { StoragePlugin } from '@iss-ai/plugin-storage';
 import { StylePropsPlugin } from '@iss-ai/plugin-style-props';
 import { AIPlugin } from '@iss-ai/plugin-ai';
 import { createCooperationPlugin } from '@iss-ai/plugin-cooperation';
+import { EChartsPlugin } from '@iss-ai/plugin-echarts';
+import { KatexPlugin } from '@iss-ai/plugin-katex';
 
 // @ts-ignore
 const ablyApiKey = import.meta.env.VITE_ABLY_API_KEY;
@@ -26,6 +28,8 @@ const activePlugins = [
   StoragePlugin,
   StylePropsPlugin,
   AIPlugin,
+  EChartsPlugin,
+  KatexPlugin,
   createCooperationPlugin({ useP2P: true, ablyApiKey }),
 ];
 
