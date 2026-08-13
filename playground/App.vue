@@ -17,6 +17,7 @@ import { AIPlugin } from '@iss-ai/plugin-ai';
 import { createCooperationPlugin } from '@iss-ai/plugin-cooperation';
 import { EChartsPlugin } from '@iss-ai/plugin-echarts';
 import { KatexPlugin } from '@iss-ai/plugin-katex';
+import { RemarkPlugin } from '@iss-ai/plugin-remark';
 
 // @ts-ignore
 const ablyApiKey = import.meta.env.VITE_ABLY_API_KEY;
@@ -30,6 +31,7 @@ const activePlugins = [
   AIPlugin,
   EChartsPlugin,
   KatexPlugin,
+  RemarkPlugin,
   createCooperationPlugin({ useP2P: true, ablyApiKey }),
 ];
 

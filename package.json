@@ -117,6 +117,7 @@
     "@iss-ai/plugin-katex": "workspace:*",
     "@iss-ai/plugin-menu": "workspace:*",
     "@iss-ai/plugin-my-library": "workspace:*",
+    "@iss-ai/plugin-remark": "workspace:*",
     "@iss-ai/plugin-storage": "workspace:*",
     "@iss-ai/plugin-style-props": "workspace:*",
     "@iss-ai/ppt-board": "workspace:*",
