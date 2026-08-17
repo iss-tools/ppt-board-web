@@ -1,7 +1,7 @@
 {
   "name": "@iss-ai/ppt-board-web",
   "description": "A fully-featured presentation and editing host application built on vue-canvas-core, integrating NaiveUI, a plugin system, and a unified local Dexie database.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "iss-tools",
   "keywords": [
     "vue",
@@ -103,6 +103,7 @@
     "typescript-eslint": "^8.65.0",
     "unocss": "^0.61.0",
     "vite": "^5.0.0",
+    "vite-plugin-cdn-import": "^1.0.1",
     "vite-plugin-dts": "^3.7.0",
     "vue": "^3.0.0",
     "vue-tsc": "^2.1.10"
@@ -111,17 +112,17 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@iss-ai/plugin-ai": "workspace:*",
-    "@iss-ai/plugin-cooperation": "workspace:*",
-    "@iss-ai/plugin-echarts": "workspace:*",
-    "@iss-ai/plugin-katex": "workspace:*",
-    "@iss-ai/plugin-menu": "workspace:*",
-    "@iss-ai/plugin-my-library": "workspace:*",
-    "@iss-ai/plugin-remark": "workspace:*",
-    "@iss-ai/plugin-storage": "workspace:*",
-    "@iss-ai/plugin-style-props": "workspace:*",
-    "@iss-ai/ppt-board": "workspace:*",
-    "@iss-ai/vue-canvas-core": "workspace:*",
+    "@iss-ai/plugin-ai": "^0.0.4",
+    "@iss-ai/plugin-cooperation": "^0.0.4",
+    "@iss-ai/plugin-echarts": "^0.0.1",
+    "@iss-ai/plugin-katex": "^0.0.3",
+    "@iss-ai/plugin-menu": "^0.0.3",
+    "@iss-ai/plugin-my-library": "^0.0.3",
+    "@iss-ai/plugin-remark": "^0.0.2",
+    "@iss-ai/plugin-storage": "^0.0.3",
+    "@iss-ai/plugin-style-props": "^0.0.3",
+    "@iss-ai/ppt-board": "^0.0.8",
+    "@iss-ai/vue-canvas-core": "^0.0.14",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "naive-ui": "^2.44.1"
