@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import UnoCSS from 'unocss/vite';
 import vue from '@vitejs/plugin-vue';
 import { Plugin as importToCDN, autoComplete } from 'vite-plugin-cdn-import';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: './',
@@ -13,34 +14,84 @@ export default defineConfig({
   plugins: [
     UnoCSS(),
     vue(),
+    VitePWA({
+      registerType: 'prompt',
+      manifest: {
+        name: 'PPT Board',
+        short_name: 'PPT Board',
+        description: 'A fully-featured presentation and editing host application',
+        theme_color: '#ffffff',
+        icons: []
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,ttf}'],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\//i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'external-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 * 365 // 365 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: /\.(?:mp3|wav|ogg|mp4)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'media-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200, 206]
+              },
+              plugins: [
+                {
+                  cachedResponseWillBeUsed: async ({ cachedResponse }) => {
+                    return cachedResponse;
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }),
     importToCDN({
       prodUrl: '{path}',
       modules: [
         {
           name: 'vue',
           var: 'Vue',
-          path: '/libs/vue.global.prod.js'
+          path: 'https://unpkg.com/vue@3.5.40/dist/vue.global.prod.js'
         },
         {
           name: 'echarts',
           var: 'echarts',
-          path: '/libs/echarts.min.js'
+          path: 'https://unpkg.com/echarts@6.1.0/dist/echarts.min.js'
         },
         {
           name: 'katex',
           var: 'katex',
-          path: '/libs/katex/katex.min.js',
-          css: '/libs/katex/katex.min.css'
+          path: 'https://unpkg.com/katex@0.18.4/dist/katex.min.js',
+          css: 'https://unpkg.com/katex@0.18.4/dist/katex.min.css'
         },
         {
           name: 'naive-ui',
           var: 'naive',
-          path: '/libs/index.prod.js'
+          path: 'https://unpkg.com/naive-ui@2.44.1/dist/index.prod.js'
         },
         {
           name: 'pptxgenjs',
           var: 'pptxgen',
-          path: '/libs/pptxgen.bundle.js'
+          path: 'https://unpkg.com/pptxgenjs@4.0.1/dist/pptxgen.bundle.js'
         }
       ]
     })
