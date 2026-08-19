@@ -116,7 +116,7 @@
     "@iss-ai/plugin-cooperation": "^0.0.5",
     "@iss-ai/plugin-echarts": "^0.0.4",
     "@iss-ai/plugin-katex": "^0.0.4",
-    "@iss-ai/plugin-menu": "^0.0.4",
+    "@iss-ai/plugin-menu": "^0.0.5",
     "@iss-ai/plugin-my-library": "^0.0.3",
     "@iss-ai/plugin-remark": "^0.0.4",
     "@iss-ai/plugin-storage": "^0.0.3",
