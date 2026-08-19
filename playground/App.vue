@@ -21,7 +21,6 @@ import { RemarkPlugin } from '@iss-ai/plugin-remark';
 
 // @ts-ignore
 const ablyApiKey = import.meta.env.VITE_ABLY_API_KEY;
-console.log('DEBUG: ABLY_API_KEY from import.meta.env is:', ablyApiKey);
 
 const activePlugins = [
   MenuPlugin,
