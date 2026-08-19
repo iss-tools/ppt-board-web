@@ -18,28 +18,28 @@ export default defineConfig({
         {
           name: 'vue',
           var: 'Vue',
-          path: 'https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js'
+          path: '/libs/vue.global.prod.js'
         },
         {
           name: 'echarts',
           var: 'echarts',
-          path: 'https://unpkg.com/echarts@5.5.0/dist/echarts.min.js'
+          path: '/libs/echarts.min.js'
         },
         {
           name: 'katex',
           var: 'katex',
-          path: 'https://unpkg.com/katex@0.16.9/dist/katex.min.js',
-          css: 'https://unpkg.com/katex@0.16.9/dist/katex.min.css'
+          path: '/libs/katex/katex.min.js',
+          css: '/libs/katex/katex.min.css'
         },
         {
           name: 'naive-ui',
           var: 'naive',
-          path: 'https://unpkg.com/naive-ui@2.44.1/dist/index.prod.js'
+          path: '/libs/index.prod.js'
         },
         {
           name: 'pptxgenjs',
           var: 'pptxgen',
-          path: 'https://unpkg.com/pptxgenjs@4.0.1/dist/pptxgen.bundle.js'
+          path: '/libs/pptxgen.bundle.js'
         }
       ]
     })
