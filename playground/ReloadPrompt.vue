@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { useRegisterSW } from 'virtual:pwa-register/vue'
-import { useI18n } from '../src/index'
+import { useI18n } from './useI18n'
 
 const { t } = useI18n()
 

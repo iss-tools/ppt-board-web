@@ -129,6 +129,7 @@
     "@iss-ai/ppt-board": "^0.0.9",
     "@iss-ai/vue-canvas-core": "^0.0.19",
     "animate.css": "^4.1.1",
-    "dexie": "^4.4.4"
+    "dexie": "^4.4.4",
+    "workbox-window": "^7.4.1"
   }
 }
