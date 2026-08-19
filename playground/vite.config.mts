@@ -14,6 +14,7 @@ export default defineConfig({
     UnoCSS(),
     vue(),
     importToCDN({
+      prodUrl: '{path}',
       modules: [
         {
           name: 'vue',
