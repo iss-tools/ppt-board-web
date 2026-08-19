@@ -119,7 +119,7 @@
   },
   "dependencies": {
     "@iss-ai/plugin-ai": "^0.0.5",
-    "@iss-ai/plugin-cooperation": "^0.0.6",
+    "@iss-ai/plugin-cooperation": "^0.0.7",
     "@iss-ai/plugin-echarts": "^0.0.5",
     "@iss-ai/plugin-katex": "^0.0.4",
     "@iss-ai/plugin-menu": "^0.0.8",
