@@ -35,6 +35,11 @@ export default defineConfig({
           name: 'naive-ui',
           var: 'naive',
           path: 'https://unpkg.com/naive-ui@2.44.1/dist/index.prod.js'
+        },
+        {
+          name: 'pptxgenjs',
+          var: 'pptxgen',
+          path: 'https://unpkg.com/pptxgenjs@4.0.1/dist/pptxgen.bundle.js'
         }
       ]
     })
