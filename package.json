@@ -56,7 +56,8 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "release": "release-it",
     "dev": "vite playground",
-    "build:demo": "vite build playground"
+    "build:demo": "vite build playground",
+    "preview": "vite preview playground"
   },
   "files": [
     "lib"

@@ -1,7 +1,6 @@
 <template>
   <div class="editor-container">
     <Main ref="editorRef" :plugins="activePlugins" />
-    <ReloadPrompt />
   </div>
 </template>
 
@@ -9,7 +8,6 @@
 import { onMounted, ref } from 'vue';
 import type { UploadFileInfo } from 'naive-ui';
 import { Main } from '../src/index';
-import ReloadPrompt from './ReloadPrompt.vue';
 
 import { MenuPlugin } from '@iss-ai/plugin-menu';
 import { MyLibraryPlugin } from '@iss-ai/plugin-my-library';

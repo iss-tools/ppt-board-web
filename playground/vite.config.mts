@@ -5,7 +5,7 @@ import { Plugin as importToCDN, autoComplete } from 'vite-plugin-cdn-import';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: './',
+  base: '/',
   resolve: {
     alias: {
 
@@ -15,7 +15,7 @@ export default defineConfig({
     UnoCSS(),
     vue(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       manifest: {
         name: 'PPT Board',
         short_name: 'PPT Board',
