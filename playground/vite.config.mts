@@ -44,5 +44,49 @@ export default defineConfig({
         }
       ]
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // Priority: Extract our own monorepo packages even if they are in node_modules
+            if (id.includes('@iss-ai/')) {
+              const match = id.match(/@iss-ai\/([^/]+)/);
+              if (match) return `iss-${match[1]}`;
+            }
+            // Other heavy dependencies
+            if (id.includes('dexie')) {
+              return 'vendor-dexie';
+            }
+            if (id.includes('@aiden0z/pptx-renderer')) {
+              return 'vendor-pptx-renderer';
+            }
+            if (id.includes('@iconify')) {
+              return 'vendor-iconify';
+            }
+            if (id.includes('lodash')) {
+              return 'vendor-lodash';
+            }
+            if (id.includes('roughjs')) {
+              return 'vendor-roughjs';
+            }
+            return 'vendor';
+          }
+          // Split internal monorepo packages (if resolved as absolute local paths)
+          if (id.includes('/plugins/plugin-')) {
+            const match = id.match(/\/plugins\/(plugin-[^\/]+)/);
+            if (match) return match[1];
+          }
+          if (id.includes('/vue-canvas-core/')) {
+            return 'core';
+          }
+          if (id.includes('/ppt-board/')) {
+            return 'board';
+          }
+        }
+      },
+      chunkSizeWarningLimit: 1000
+    }
+  }
 });
