@@ -18,28 +18,32 @@ export default defineConfig(({ command }) => {
       vue(),
       VitePWA({
         registerType: 'autoUpdate',
+        devOptions: {
+          enabled: true,
+        },
         manifest: {
           name: 'PPT Board',
           short_name: 'PPT Board',
           description: 'A fully-featured presentation and editing host application',
           theme_color: '#ffffff',
+          background_color: '#ffffff',
           start_url: '/',
           display: 'standalone',
           icons: [
             {
-              src: '/favicon.svg',
+              src: '/pwa-192x192.png',
               sizes: '192x192',
-              type: 'image/svg+xml',
+              type: 'image/png',
             },
             {
-              src: '/favicon.svg',
+              src: '/pwa-512x512.png',
               sizes: '512x512',
-              type: 'image/svg+xml',
+              type: 'image/png',
             },
             {
-              src: '/favicon.svg',
-              sizes: '192x192 512x512',
-              type: 'image/svg+xml',
+              src: '/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
               purpose: 'any maskable',
             },
           ],
