@@ -119,7 +119,7 @@
   },
   "dependencies": {
     "@iss-ai/plugin-ai": "^0.0.5",
-    "@iss-ai/plugin-cooperation": "^0.0.7",
+    "@iss-ai/plugin-cooperation": "^0.0.8",
     "@iss-ai/plugin-echarts": "^0.0.5",
     "@iss-ai/plugin-katex": "^0.0.4",
     "@iss-ai/plugin-menu": "^0.0.8",
@@ -128,7 +128,7 @@
     "@iss-ai/plugin-storage": "^0.0.4",
     "@iss-ai/plugin-style-props": "^0.0.6",
     "@iss-ai/ppt-board": "^0.0.9",
-    "@iss-ai/vue-canvas-core": "^0.0.20",
+    "@iss-ai/vue-canvas-core": "^0.0.21",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "workbox-window": "^7.4.1"

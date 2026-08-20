@@ -8,7 +8,10 @@ export default defineConfig(({ command }) => {
   return {
     base: '/',
     resolve: {
-      alias: {}
+      alias: {},
+    },
+    server: {
+      host: true,
     },
     plugins: [
       UnoCSS(),
@@ -26,20 +29,20 @@ export default defineConfig(({ command }) => {
             {
               src: '/favicon.svg',
               sizes: '192x192',
-              type: 'image/svg+xml'
+              type: 'image/svg+xml',
             },
             {
               src: '/favicon.svg',
               sizes: '512x512',
-              type: 'image/svg+xml'
+              type: 'image/svg+xml',
             },
             {
               src: '/favicon.svg',
               sizes: '192x192 512x512',
               type: 'image/svg+xml',
-              purpose: 'any maskable'
-            }
-          ]
+              purpose: 'any maskable',
+            },
+          ],
         },
         workbox: {
           maximumFileSizeToCacheInBytes: 50 * 1024 * 1024, // 50MB
@@ -52,12 +55,12 @@ export default defineConfig(({ command }) => {
                 cacheName: 'external-cache',
                 expiration: {
                   maxEntries: 100,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // 365 days
+                  maxAgeSeconds: 60 * 60 * 24 * 365, // 365 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200]
-                }
-              }
+                  statuses: [0, 200],
+                },
+              },
             },
             {
               urlPattern: /\.(?:mp3|wav|ogg|mp4)$/i,
@@ -66,54 +69,56 @@ export default defineConfig(({ command }) => {
                 cacheName: 'media-cache',
                 expiration: {
                   maxEntries: 50,
-                  maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
+                  maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
                 },
                 cacheableResponse: {
-                  statuses: [0, 200, 206]
+                  statuses: [0, 200, 206],
                 },
                 plugins: [
                   {
                     cachedResponseWillBeUsed: async ({ cachedResponse }) => {
                       return cachedResponse;
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
       }),
-      command === 'build' ? importToCDN({
-        prodUrl: '{path}',
-        modules: [
-          {
-            name: 'vue',
-            var: 'Vue',
-            path: 'https://unpkg.com/vue@3.5.40/dist/vue.global.prod.js'
-          },
-          {
-            name: 'echarts',
-            var: 'echarts',
-            path: 'https://unpkg.com/echarts@6.1.0/dist/echarts.min.js'
-          },
-          {
-            name: 'katex',
-            var: 'katex',
-            path: 'https://unpkg.com/katex@0.18.4/dist/katex.min.js',
-            css: 'https://unpkg.com/katex@0.18.4/dist/katex.min.css'
-          },
-          {
-            name: 'naive-ui',
-            var: 'naive',
-            path: 'https://unpkg.com/naive-ui@2.44.1/dist/index.prod.js'
-          },
-          {
-            name: 'pptxgenjs',
-            var: 'pptxgen',
-            path: 'https://unpkg.com/pptxgenjs@4.0.1/dist/pptxgen.bundle.js'
-          }
-        ]
-      }) : undefined
+      command === 'build'
+        ? importToCDN({
+            prodUrl: '{path}',
+            modules: [
+              {
+                name: 'vue',
+                var: 'Vue',
+                path: 'https://unpkg.com/vue@3.5.40/dist/vue.global.prod.js',
+              },
+              {
+                name: 'echarts',
+                var: 'echarts',
+                path: 'https://unpkg.com/echarts@6.1.0/dist/echarts.min.js',
+              },
+              {
+                name: 'katex',
+                var: 'katex',
+                path: 'https://unpkg.com/katex@0.18.4/dist/katex.min.js',
+                css: 'https://unpkg.com/katex@0.18.4/dist/katex.min.css',
+              },
+              {
+                name: 'naive-ui',
+                var: 'naive',
+                path: 'https://unpkg.com/naive-ui@2.44.1/dist/index.prod.js',
+              },
+              {
+                name: 'pptxgenjs',
+                var: 'pptxgen',
+                path: 'https://unpkg.com/pptxgenjs@4.0.1/dist/pptxgen.bundle.js',
+              },
+            ],
+          })
+        : undefined,
     ],
     build: {
       rollupOptions: {
@@ -154,10 +159,10 @@ export default defineConfig(({ command }) => {
             if (id.includes('/ppt-board/')) {
               return 'board';
             }
-          }
+          },
         },
-        chunkSizeWarningLimit: 1000
-      }
-    }
+        chunkSizeWarningLimit: 1000,
+      },
+    },
   };
 });
