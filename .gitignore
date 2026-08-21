@@ -8,6 +8,7 @@ coverage/
 .DS_Store
 node_modules
 /dist
+dev-dist
 /test
 /artifacts
 

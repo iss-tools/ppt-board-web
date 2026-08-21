@@ -124,7 +124,7 @@
     "@iss-ai/plugin-katex": "^0.0.4",
     "@iss-ai/plugin-menu": "^0.0.10",
     "@iss-ai/plugin-my-library": "^0.0.4",
-    "@iss-ai/plugin-remark": "^0.0.4",
+    "@iss-ai/plugin-remark": "^0.0.5",
     "@iss-ai/plugin-storage": "^0.0.4",
     "@iss-ai/plugin-style-props": "^0.0.6",
     "@iss-ai/ppt-board": "^0.0.9",
